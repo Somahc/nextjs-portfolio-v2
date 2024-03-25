@@ -14,5 +14,8 @@
   },
   "[ejs]": {
     "editor.formatOnSave": false
+  },
+  "editor.quickSuggestions": {
+    "strings": true
   }
 }
