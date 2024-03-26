@@ -20,7 +20,7 @@ export default function Header() {
           <Link href="/about" className="mr-5 hover:text-gray-300">
             About
           </Link>
-          <Link href="/blog" className="mr-5 hover:text-gray-300">
+          <Link href="/tech_blog" className="mr-5 hover:text-gray-300">
             Blog
           </Link>
         </nav>
