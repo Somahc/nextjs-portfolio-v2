@@ -46,13 +46,8 @@ export default async function Blog() {
       >
         Tech Blog
       </h1>
-      <div className="py-7 flex">
-        主に技術系の内容のアウトプット・備忘録として
-        <a href="https://zenn.dev/somahc" className="text-blue-500">
-          Zenn
-        </a>
-        <FaExternalLinkAlt className="pd-5 text-blue-500" size={13} />
-        に記事を投稿するようにしています。
+      <div className="py-7">
+        主に技術系の内容のアウトプット・備忘録として、Zennに記事を投稿するようにしています。
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-10 lg:gap-x-10 gap-y-5 md:gap-y-1">
         {articles.map((article: ZennItem) => (
