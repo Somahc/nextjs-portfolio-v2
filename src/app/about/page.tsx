@@ -9,7 +9,7 @@ import { SiDuolingo } from "react-icons/si";
 export default function Page() {
   return (
     <main>
-      <h1 className="text-6xl font-bold border-b border-muted pb-3">About</h1>
+      {/* <h1 className="text-6xl font-bold border-b border-muted pb-3">About</h1> */}
       <Image
         className="mx-auto rounded-full py-5"
         style={{ borderRadius: "50%" }}
@@ -57,7 +57,7 @@ export default function Page() {
       </p>
 
       <h2
-        className="text-3xl border-b border-muted pb-3 mb-4"
+        className="text-4xl border-b border-muted pb-3 mb-4"
         style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
       >
         Skill
@@ -104,7 +104,7 @@ export default function Page() {
       </ul>
 
       <h2
-        className="text-3xl border-b border-muted pb-3 mb-4"
+        className="text-4xl border-b border-muted pb-3 mb-4"
         style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
       >
         Career
@@ -124,7 +124,7 @@ export default function Page() {
       </ul>
 
       <h2
-        className="text-3xl border-b border-muted pb-3 mb-4"
+        className="text-4xl border-b border-muted pb-3 mb-4"
         style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
       >
         好きなこと
