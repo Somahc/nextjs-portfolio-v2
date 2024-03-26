@@ -8,10 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        // 全体的な背景色
+        background: "hsl(var(--background))",
+
+        // 全体的な文字色
+        foreground: "hsl(var(--foreground))",
+
+        // サブ的要素の背景色、文字色
+        muted: {
+          // 背景色
+          DEFAULT: "hsl(var(--muted))",
+
+          // 文字色
+          foreground: "hsl(var(--muted-foreground))",
+        },
       },
     },
   },

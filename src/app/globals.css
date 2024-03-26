@@ -2,8 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
-:root {
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 0 1% 90%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%; */
+  }
+
+  .dark {
+    --background: 0 0% 15%;
+    --foreground: 213 31% 91%;
+
+    --muted: 0 1% 28%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    /* --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%; */
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
