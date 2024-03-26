@@ -76,7 +76,7 @@ export default async function Blog() {
 
       <a href="https://zenn.dev/somahc" className="flex justify-center">
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          <span className="flex items-center">
+          <span className="inline-flex items-center">
             他の記事も見てみる
             <FaExternalLinkAlt className="ml-1" />
           </span>
