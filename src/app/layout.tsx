@@ -25,7 +25,9 @@ export default function RootLayout({
       <body className={`${notoSansJp.className}`}>
         <Providers>
           <Header />
-          <Container>{children}</Container>
+          <Container>
+            <main>{children}</main>
+          </Container>
           <Footer />
         </Providers>
       </body>
