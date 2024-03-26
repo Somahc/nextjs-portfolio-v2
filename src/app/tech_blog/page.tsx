@@ -1,3 +1,5 @@
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 type ZennItem = {
   id: string;
   title: string;
@@ -44,10 +46,15 @@ export default async function Blog() {
       >
         Tech Blog
       </h1>
-      <div className="py-7">
-        主に技術系の内容のアウトプット・備忘録としてZennに記事を投稿するようにしています。
+      <div className="py-7 flex">
+        主に技術系の内容のアウトプット・備忘録として
+        <a href="https://zenn.dev/somahc" className="text-blue-500">
+          Zenn
+        </a>
+        <FaExternalLinkAlt className="pd-5 text-blue-500" size={13} />
+        に記事を投稿するようにしています。
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-10 lg:gap-x-10 gap-y-5 md:gap-y-1 mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-10 lg:gap-x-10 gap-y-5 md:gap-y-1">
         {articles.map((article: ZennItem) => (
           <div className="mb-10" key={article.slug}>
             <a href={`${ZENN_API}/${article.path}`}>
@@ -71,6 +78,15 @@ export default async function Blog() {
           </div>
         ))}
       </div>
+
+      <a href="https://zenn.dev/somahc" className="flex justify-center">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <span className="flex items-center">
+            他の記事も見てみる
+            <FaExternalLinkAlt className="ml-1" />
+          </span>
+        </button>
+      </a>
     </div>
   );
 }
