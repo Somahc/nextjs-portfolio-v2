@@ -5,6 +5,7 @@ import Header from "./components/header";
 import Container from "./components/container";
 import { Providers } from "./components/providers";
 import { Noto_Sans_JP } from "next/font/google";
+import Footer from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const notoSansJp = Noto_Sans_JP({ weight: "400", subsets: ["latin"] });
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           <Container>{children}</Container>
+          <Footer />
         </Providers>
       </body>
     </html>
