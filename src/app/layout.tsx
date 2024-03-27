@@ -10,7 +10,7 @@ const notoSansJp = Noto_Sans_JP({ weight: ["400", "800"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Somahcのブログ",
-  description: "Zennの投稿、個人ブログをまとめています。",
+  description: "Somahcのブログ",
 };
 
 export default function RootLayout({

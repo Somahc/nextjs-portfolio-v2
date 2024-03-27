@@ -15,8 +15,23 @@ type Props = {
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const id = props.params.articleId;
   const article = await getArticlesDetail(id);
+  const url = `https://${process.env.VERCEL_URL}` || "https://localhost:3000";
+  const ogUrl = new URL(`${url}/api/og?id=${id}`);
   return {
     title: article.title,
+    openGraph: {
+      title: article.title,
+      description: article.title,
+      type: "article",
+      images: [
+        {
+          url: ogUrl.toString(),
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+    },
   };
 }
 
