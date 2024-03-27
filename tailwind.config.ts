@@ -24,6 +24,9 @@ const config: Config = {
           foreground: "hsl(var(--muted-foreground))",
         },
       },
+      fontFamily: {
+        notoJP: ["var(--font-notojp)"],
+      },
     },
   },
   plugins: [],

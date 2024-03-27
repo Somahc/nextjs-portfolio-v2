@@ -6,7 +6,7 @@ import { Providers } from "./components/providers";
 import { Noto_Sans_JP } from "next/font/google";
 import Footer from "./components/footer";
 
-const notoSansJp = Noto_Sans_JP({ weight: "400", subsets: ["latin"] });
+const notoSansJp = Noto_Sans_JP({ weight: ["400", "800"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",

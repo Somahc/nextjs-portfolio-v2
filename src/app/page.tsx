@@ -6,10 +6,7 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col justify-center items-center my-40">
-        <h2
-          className="text-7xl"
-          style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
-        >
+        <h2 className="text-7xl" style={{ fontWeight: "800" }}>
           Hello there! 👋
         </h2>
         <div className="text-gray-500 pt-3">
