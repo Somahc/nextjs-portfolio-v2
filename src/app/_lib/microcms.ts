@@ -18,7 +18,8 @@ export async function getArticles(queries?: MicroCMSQueries) {
   const articles = await microCMSClient.getList<Article>({
     customRequestInit: {
       next: {
-        revalidate: 43200000,
+        // revalidate: 3600,
+        revalidate: 0,
       },
     },
     endpoint: "articles",
@@ -35,7 +36,8 @@ export async function getArticlesDetail(
   const articlesDetail = await microCMSClient.getListDetail<Article>({
     customRequestInit: {
       next: {
-        revalidate: 43200000,
+        // revalidate: 3600,
+        revalidate: 0,
       },
     },
     endpoint: "articles",
@@ -50,7 +52,8 @@ export async function getCategories(queries?: MicroCMSQueries) {
   const categories = await microCMSClient.getList<Category>({
     customRequestInit: {
       next: {
-        revalidate: 43200000,
+        // revalidate: 3600,
+        revalidate: 0,
       },
     },
     endpoint: "categories",
@@ -67,7 +70,8 @@ export async function getCategoryDetail(
   const categoriesDetail = await microCMSClient.getListDetail<Category>({
     customRequestInit: {
       next: {
-        revalidate: 43200000,
+        // revalidate: 3600,
+        revalidate: 0,
       },
     },
     endpoint: "categories",

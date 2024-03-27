@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
+import Link from "next/link";
 // import "@/styles/article.css";
 import "zenn-content-css";
 
@@ -50,28 +51,46 @@ export default async function Article(props: Props) {
   }
   return (
     <article>
-      <h1>{article.title}</h1>
-      <p>{formatDate(article.publishedAt)}</p>
-      <Image
-        src={article.eyecatch?.url ?? "/no-image.jpeg"}
-        alt="アイキャッチ"
-        width={1400}
-        height={1000}
-        className="rounded-lg object-cove"
-      />
-      <div className="flex flex-wrap justify-start gap-2 w-full md:px-8">
-        {/* カテゴリの表示追加 */}
-        {article.categories.map((category) => (
-          <a
-            href={`/category/${category.id}`}
-            className="bg-slate-700 rounded-full px-2"
-            key={`${article.id}-${category.id}`}
-          >
-            #{category.name}
-          </a>
-        ))}
-      </div>
-      <div className="znc container mx-auto md:px-20">
+      <div className="znc mx-auto max-w-[640px]">
+        <div className="text-4xl font-bold text-center">{article.title}</div>
+        <p className="text-center text-gray-500">
+          {formatDate(article.publishedAt)}
+        </p>
+        <div className="flex flex-wrap justify-center gap-2 w-full md:px-8">
+          {/* カテゴリの表示追加 */}
+          {article.categories.map((category) => (
+            <Link
+              href={`/categories/${category.id}`}
+              className="text-sm bg-muted rounded-full px-2"
+              key={`${article.id}-${category.id}`}
+            >
+              {category.name}
+            </Link>
+          ))}
+        </div>
+        <div
+          className="overflow-hidden rounded-xl"
+          style={{
+            width: "640px",
+            height: "400px",
+            position: "relative",
+          }}
+        >
+          <Image
+            src={article.eyecatch?.url ?? "/no-image.jpeg"}
+            alt="アイキャッチ"
+            layout="fill"
+            className="rounded-xl object-contain"
+          />
+        </div>
+        {/* <Image
+          src={article.eyecatch?.url ?? "/no-image.jpeg"}
+          alt="アイキャッチ"
+          width={600}
+          height={600}
+          className="rounded-lg shadow-xl object-cover"
+        /> */}
+
         {parse(article.content)}
       </div>
     </article>

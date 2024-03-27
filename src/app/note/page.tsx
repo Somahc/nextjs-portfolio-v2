@@ -23,12 +23,12 @@ export default function Home() {
       <h1 className="text-4xl" style={{ fontWeight: "800" }}>
         Note
       </h1>
-      <div className="py-7">技術系以外の雑記などなど。</div>
-      <h2 className="text-2xl mb-4" style={{ fontWeight: "800" }}>
+      <div className="pt-2 pb-7">技術系以外の雑記などなど。</div>
+      <h2 className="text-xl mb-2" style={{ fontWeight: "800" }}>
         カテゴリー
       </h2>
       <CategoryList />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-7">
         {contents.map((article) => (
           <article
             className="flex flex-col border border-muted rounded-2xl hover:scale-105 duration-150 p-4"
@@ -38,14 +38,22 @@ export default function Home() {
               href={`/note/${article.id}`}
               className="flex flex-col items-center"
             >
-              <Image
-                src={article.eyecatch?.url ?? "/no-image.jpeg"}
-                alt="アイキャッチ"
-                width={1600}
-                height={1200}
-                className="rounded-xl object-cover"
-              />
-              <h2 className="text-2xl mt-2">{article.title}</h2>
+              <div
+                className="overflow-hidden rounded-xl"
+                style={{
+                  width: "320px",
+                  height: "200px",
+                  position: "relative",
+                }}
+              >
+                <Image
+                  src={article.eyecatch?.url ?? "/no-image.jpeg"}
+                  alt="アイキャッチ"
+                  layout="fill"
+                  className="rounded-xl object-contain overflow-hidden"
+                />
+              </div>
+              <h2 className="text-lg font-bold mt-2">{article.title}</h2>
               <p className="text-sm mt-2 text-gray-500">
                 {formatDate(article.publishedAt)}
               </p>

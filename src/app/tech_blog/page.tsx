@@ -43,7 +43,7 @@ export default async function Blog() {
       <h1 className="text-4xl" style={{ fontWeight: "800" }}>
         Tech Blog
       </h1>
-      <div className="py-7">
+      <div className="pt-2 mb-7">
         主に技術系の内容のアウトプット・備忘録として、Zennに記事を投稿するようにしています。
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-10 lg:gap-x-10 gap-y-5 md:gap-y-1">
@@ -55,7 +55,7 @@ export default async function Blog() {
                   {article.emoji}
                 </div>
                 <div className="mx-auto max-w-max">
-                  <div className="px-5 pt-7">{article.title}</div>
+                  <div className="px-5 pt-7 font-bold">{article.title}</div>
                   <div className="text-center text-gray-400 text-sm mt-2 mb-1">
                     {formatDate(article.published_at)}
                   </div>
