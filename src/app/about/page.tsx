@@ -58,14 +58,11 @@ export default function Page() {
 
       <h2
         className="text-4xl border-b border-muted pb-3 mb-4"
-        style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
+        style={{ fontWeight: "800" }}
       >
         Skill
       </h2>
-      <h3
-        className="text-2xl mb-3"
-        style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
-      >
+      <h3 className="text-2xl mb-3" style={{ fontWeight: "800" }}>
         よく使う技術
       </h3>
       <ul className="list-disc mb-8">
@@ -77,10 +74,7 @@ export default function Page() {
         <li className="ml-5 mb-2">Unity</li>
         <li className="ml-5 mb-2">Git/GitHub</li>
       </ul>
-      <h3
-        className="text-2xl font-semibold mb-3"
-        style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
-      >
+      <h3 className="text-2xl font-semibold mb-3" style={{ fontWeight: "800" }}>
         その他勉強中の技術
       </h3>
       <ul className="list-disc mb-8">
@@ -90,10 +84,7 @@ export default function Page() {
         <li className="ml-5 mb-2">PHP(Laravel)</li>
         <li className="ml-5 mb-2">NestJS</li>
       </ul>
-      <h3
-        className="text-2xl font-semibold mb-3"
-        style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
-      >
+      <h3 className="text-2xl font-semibold mb-3" style={{ fontWeight: "800" }}>
         資格
       </h3>
       <ul className="list-disc mb-10">
@@ -105,7 +96,7 @@ export default function Page() {
 
       <h2
         className="text-4xl border-b border-muted pb-3 mb-4"
-        style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
+        style={{ fontWeight: "800" }}
       >
         Career
       </h2>
@@ -125,7 +116,7 @@ export default function Page() {
 
       <h2
         className="text-4xl border-b border-muted pb-3 mb-4"
-        style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
+        style={{ fontWeight: "800" }}
       >
         好きなこと
       </h2>

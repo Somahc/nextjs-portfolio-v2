@@ -40,10 +40,7 @@ export default async function Blog() {
   const articles = data.articles || [];
   return (
     <div className="lg:mx-40">
-      <h1
-        className="text-4xl"
-        style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
-      >
+      <h1 className="text-4xl" style={{ fontWeight: "800" }}>
         Tech Blog
       </h1>
       <div className="py-7">
@@ -58,12 +55,7 @@ export default async function Blog() {
                   {article.emoji}
                 </div>
                 <div className="mx-auto max-w-max">
-                  <div
-                    className="px-5 pt-7"
-                    style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
-                  >
-                    {article.title}
-                  </div>
+                  <div className="px-5 pt-7">{article.title}</div>
                   <div className="text-center text-gray-400 text-sm mt-2 mb-1">
                     {formatDate(article.published_at)}
                   </div>
@@ -75,7 +67,7 @@ export default async function Blog() {
       </div>
 
       <a href="https://zenn.dev/somahc" className="flex justify-center">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
           <span className="inline-flex items-center">
             他の記事も見てみる
             <FaExternalLinkAlt className="ml-1" />

@@ -11,12 +11,7 @@ export default function Header() {
             href="/"
             className="flex title-font font-medium items-center mb-0"
           >
-            <span
-              className="mr-1 sm:mr-0 text-xl"
-              style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
-            >
-              Somahc
-            </span>
+            <span className="mr-1 sm:mr-0 text-xl">Somahc</span>
           </Link>
           <nav className="mr-auto ml-2 sm:ml-4 py-1 pl-4 border-l border-gray-400 flex flex-wrap items-center text-base justify-center">
             <Link href="/about" className="mr-2 sm:mr-5 hover:text-gray-300">

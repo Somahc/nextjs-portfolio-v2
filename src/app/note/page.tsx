@@ -20,21 +20,15 @@ export default function Home() {
   const { contents } = use(getArticles());
   return (
     <div className="lg:mx-40">
-      <h1
-        className="text-4xl"
-        style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
-      >
+      <h1 className="text-4xl" style={{ fontWeight: "800" }}>
         Note
       </h1>
       <div className="py-7">技術系以外の雑記などなど。</div>
-      <h2
-        className="text-2xl mb-2"
-        style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
-      >
+      <h2 className="text-2xl mb-4" style={{ fontWeight: "800" }}>
         カテゴリー
       </h2>
       <CategoryList />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         {contents.map((article) => (
           <article
             className="flex flex-col border border-muted rounded-2xl hover:scale-105 duration-150 p-4"
@@ -51,7 +45,7 @@ export default function Home() {
                 height={1200}
                 className="rounded-xl object-cover"
               />
-              <h2 className="text-2xl font-bold mt-2">{article.title}</h2>
+              <h2 className="text-2xl mt-2">{article.title}</h2>
               <p className="text-sm mt-2 text-gray-500">
                 {formatDate(article.publishedAt)}
               </p>
