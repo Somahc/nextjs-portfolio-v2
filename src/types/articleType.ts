@@ -11,5 +11,6 @@ export type Article = {
   content: string;
   eyecatch?: MicroCMSImage;
   categories: Category[];
+  emoji: string;
   publishedAt?: string;
 } & MicroCMSDate;

@@ -38,21 +38,7 @@ export default function Home() {
               href={`/note/${article.id}`}
               className="flex flex-col items-center"
             >
-              <div
-                className="overflow-hidden rounded-xl"
-                style={{
-                  width: "320px",
-                  height: "200px",
-                  position: "relative",
-                }}
-              >
-                <Image
-                  src={article.eyecatch?.url ?? "/no-image.jpeg"}
-                  alt="アイキャッチ"
-                  layout="fill"
-                  className="rounded-xl object-contain overflow-hidden"
-                />
-              </div>
+              <div className="text-6xl">{article.emoji}</div>
               <h2 className="text-lg font-bold mt-2">{article.title}</h2>
               <p className="text-sm mt-2 text-gray-500">
                 {formatDate(article.publishedAt)}

@@ -52,6 +52,7 @@ export default async function Article(props: Props) {
   return (
     <article>
       <div className="znc mx-auto max-w-[640px]">
+        <div className="text-center text-6xl mb-4">{article.emoji}</div>
         <div className="text-4xl font-bold text-center">{article.title}</div>
         <p className="text-center text-gray-500">
           {formatDate(article.publishedAt)}
@@ -68,30 +69,7 @@ export default async function Article(props: Props) {
             </Link>
           ))}
         </div>
-        <div
-          className="overflow-hidden rounded-xl"
-          style={{
-            width: "640px",
-            height: "400px",
-            position: "relative",
-          }}
-        >
-          <Image
-            src={article.eyecatch?.url ?? "/no-image.jpeg"}
-            alt="アイキャッチ"
-            layout="fill"
-            className="rounded-xl object-contain"
-          />
-        </div>
-        {/* <Image
-          src={article.eyecatch?.url ?? "/no-image.jpeg"}
-          alt="アイキャッチ"
-          width={600}
-          height={600}
-          className="rounded-lg shadow-xl object-cover"
-        /> */}
-
-        {parse(article.content)}
+        <div className="mt-10">{parse(article.content)}</div>
       </div>
     </article>
   );

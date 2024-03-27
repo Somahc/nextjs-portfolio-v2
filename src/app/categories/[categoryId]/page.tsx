@@ -56,13 +56,7 @@ export default function CategoryArticleList(props: Props) {
               href={`/note/${article.id}`}
               className="flex flex-col items-center"
             >
-              <Image
-                src={article.eyecatch?.url ?? "/no-image.jpeg"}
-                alt="アイキャッチ"
-                width={1600}
-                height={1200}
-                className="rounded-xl object-cover"
-              />
+              <div className="text-6xl">{article.emoji}</div>
               <h2 className="text-2xl font-bold mt-2">{article.title}</h2>
               <p className="text-sm mt-2 text-gray-500">
                 {formatDate(article.publishedAt)}
