@@ -23,6 +23,9 @@ export default function Header() {
           <Link href="/tech_blog" className="mr-5 hover:text-gray-300">
             Blog
           </Link>
+          <Link href="/note" className="mr-5 hover:text-gray-300">
+            Note
+          </Link>
         </nav>
         <ThemeSwitch />
       </div>
