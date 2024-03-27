@@ -15,7 +15,8 @@ type Props = {
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const id = props.params.articleId;
   const article = await getArticlesDetail(id);
-  const url = `https://${process.env.VERCEL_URL}` || "https://localhost:3000";
+  const url =
+    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` || "https://localhost:3000";
   const ogUrl = new URL(`${url}/api/og?id=${id}`);
   return {
     title: article.title,
