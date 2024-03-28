@@ -14,12 +14,17 @@ export async function GET(request: Request) {
       return new Response("パラメータidは必須です", { status: 400 });
     }
 
+    const fontData = await fetch(
+      new URL("./compressedNoto.ttf", import.meta.url),
+    ).then((res) => res.arrayBuffer());
+
     const article = await getArticlesDetail(id);
 
     return new ImageResponse(
       (
         <div
           style={{
+            fontFamily: "Noto",
             backgroundImage: "linear-gradient(to bottom, #dbf4ff, #ffeeff)",
             backgroundSize: "100% 100%",
             height: "100%",
@@ -39,7 +44,6 @@ export async function GET(request: Request) {
               width: "100%",
               fontSize: 70,
               fontStyle: "normal",
-              fontWeight: "bold",
               color: "#000",
               padding: "0 120px",
               lineHeight: 1.3,
@@ -54,7 +58,6 @@ export async function GET(request: Request) {
               width: "100%",
               fontSize: 25,
               fontStyle: "normal",
-              fontWeight: "bold",
               color: "#000",
               padding: "0 120px",
               lineHeight: 1.3,
@@ -66,7 +69,7 @@ export async function GET(request: Request) {
                 key={index}
                 style={{
                   backgroundColor: "#6666FF",
-                  padding: "5px 10px",
+                  padding: "7px 10px 10px 10px",
                   marginRight: "10px",
                   borderRadius: "30px",
                   color: "#fff",
@@ -79,7 +82,6 @@ export async function GET(request: Request) {
           <div
             style={{
               position: "absolute",
-              // textAlign: "right",
               bottom: "70px",
               marginLeft: "140px",
               fontSize: 60,
@@ -92,6 +94,13 @@ export async function GET(request: Request) {
       {
         width: 1200,
         height: 630,
+        fonts: [
+          {
+            name: "Noto",
+            data: fontData,
+            style: "normal",
+          },
+        ],
       },
     );
   } catch (e: any) {
