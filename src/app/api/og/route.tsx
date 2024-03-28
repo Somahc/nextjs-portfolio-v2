@@ -1,5 +1,6 @@
 import { ImageResponse } from "@vercel/og";
 import { getArticlesDetail } from "@/app/_lib/microcms";
+import { loadGoogleFont } from "@/app/_lib/font";
 
 export const runtime = "edge";
 
@@ -13,9 +14,14 @@ export async function GET(request: Request) {
       return new Response("id is required", { status: 400 });
     }
 
-    const fontData = await fetch(
-      new URL("./compressedMplus.ttf", import.meta.url),
-    ).then((res) => res.arrayBuffer());
+    // const fontData = await fetch(
+    //   new URL("./compressedMplus.ttf", import.meta.url),
+    // ).then((res) => res.arrayBuffer());
+
+    const fontData = await loadGoogleFont({
+      family: "Noto Sans JP",
+      weight: 700,
+    });
 
     const article = await getArticlesDetail(id);
 
@@ -80,11 +86,9 @@ export async function GET(request: Request) {
               bottom: "70px",
               marginLeft: "140px",
               fontSize: 60,
-              display: "flex",
             }}
           >
-            <div style={{ paddingTop: "10px", paddingRight: "10px" }}>😼</div>
-            <div>Somahc</div>
+            Somahc 😼
           </div>
         </div>
       ),
