@@ -13,7 +13,7 @@ const notoSansJp = Noto_Sans_JP({ weight: ['400', '800'], subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Somahcのブログ',
   description: 'Somahcのブログ',
-  icons: [{ rel: 'icon', url: Favicon.src }],
+  icons: [{ rel: 'icon', url: Favicon.src }], // ファビコン
 }
 
 export default function RootLayout({
