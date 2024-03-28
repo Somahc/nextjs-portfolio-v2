@@ -1,29 +1,23 @@
-import Link from "next/link";
-import ThemeSwitch from "./theme-switch";
-import Container from "./container";
+import Link from 'next/link'
+import ThemeSwitch from './theme-switch'
+import Container from './container'
 
 export default function Header() {
   return (
-    <header className="border-b mb-8 border-muted">
+    <header className='mb-8 border-b border-muted'>
       <Container>
-        <div className="flex flex-wrap py-3 md:flex-row items-center">
-          <Link
-            href="/"
-            className="flex title-font font-medium items-center mb-0"
-          >
-            <span className="mr-1 sm:mr-0 text-xl">Somahc</span>
+        <div className='flex flex-wrap items-center py-3 md:flex-row'>
+          <Link href='/' className='title-font mb-0 flex items-center font-medium'>
+            <span className='mr-1 text-xl font-bold sm:mr-0'>Somahc</span>
           </Link>
-          <nav className="mr-auto ml-2 sm:ml-4 py-1 pl-4 border-l border-gray-400 flex flex-wrap items-center text-base justify-center">
-            <Link href="/about" className="mr-2 sm:mr-5 hover:text-gray-300">
+          <nav className='ml-2 mr-auto flex flex-wrap items-center justify-center border-l border-gray-400 py-1 pl-4 text-base sm:ml-4'>
+            <Link href='/about' className='mr-2 hover:text-gray-300 sm:mr-5'>
               About
             </Link>
-            <Link
-              href="/tech_blog"
-              className="mr-2 sm:mr-5 hover:text-gray-300"
-            >
+            <Link href='/tech_blog' className='mr-2 hover:text-gray-300 sm:mr-5'>
               Blog
             </Link>
-            <Link href="/note" className="mr-2 sm:mr-5 hover:text-gray-300">
+            <Link href='/note' className='mr-2 hover:text-gray-300 sm:mr-5'>
               Note
             </Link>
           </nav>
@@ -31,5 +25,5 @@ export default function Header() {
         </div>
       </Container>
     </header>
-  );
+  )
 }
