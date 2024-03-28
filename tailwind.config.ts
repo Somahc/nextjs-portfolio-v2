@@ -1,35 +1,35 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
         // 全体的な背景色
-        background: "hsl(var(--background))",
+        background: 'hsl(var(--background))',
 
         // 全体的な文字色
-        foreground: "hsl(var(--foreground))",
+        foreground: 'hsl(var(--foreground))',
 
         // サブ的要素の背景色、文字色
         muted: {
           // 背景色
-          DEFAULT: "hsl(var(--muted))",
+          DEFAULT: 'hsl(var(--muted))',
 
           // 文字色
-          foreground: "hsl(var(--muted-foreground))",
+          foreground: 'hsl(var(--muted-foreground))',
         },
       },
       fontFamily: {
-        notoJP: ["var(--font-notojp)"],
+        notoJP: ['var(--font-notojp)'],
       },
     },
   },
   plugins: [],
-  darkMode: "class",
-};
-export default config;
+  darkMode: 'class',
+}
+export default config
