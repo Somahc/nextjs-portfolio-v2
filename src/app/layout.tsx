@@ -6,12 +6,14 @@ import { Providers } from './components/providers'
 import { Noto_Sans_JP } from 'next/font/google'
 import Footer from './components/footer'
 import { ProvidersNextUi } from './providers'
+import Favicon from './icon.png'
 
 const notoSansJp = Noto_Sans_JP({ weight: ['400', '800'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Somahcのブログ',
   description: 'Somahcのブログ',
+  icons: [{ rel: 'icon', url: Favicon.src }],
 }
 
 export default function RootLayout({
