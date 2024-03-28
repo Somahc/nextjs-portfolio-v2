@@ -40,10 +40,7 @@ export default function CategoryArticleList(props: Props) {
 
   return (
     <div className="lg:mx-40">
-      <h1
-        className="text-4xl mb-10"
-        style={{ fontWeight: "800", fontFamily: "Noto Sans JP" }}
-      >
+      <h1 className="text-4xl mb-10" style={{ fontWeight: "800" }}>
         "{category.name}" の記事一覧
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -57,7 +54,7 @@ export default function CategoryArticleList(props: Props) {
               className="flex flex-col items-center"
             >
               <div className="text-6xl">{article.emoji}</div>
-              <h2 className="text-2xl font-bold mt-2">{article.title}</h2>
+              <h2 className="text-lg font-bold mt-2">{article.title}</h2>
               <p className="text-sm mt-2 text-gray-500">
                 {formatDate(article.publishedAt)}
               </p>
