@@ -1,6 +1,5 @@
 import { ImageResponse } from "@vercel/og";
 import { getArticlesDetail } from "@/app/_lib/microcms";
-import { Article } from "@/types/articleType";
 
 export const runtime = "edge";
 
@@ -11,7 +10,7 @@ export async function GET(request: Request) {
     const id = searchParams.get("id");
 
     if (!id) {
-      return new Response("パラメータidは必須です", { status: 400 });
+      return new Response("id is required", { status: 400 });
     }
 
     const fontData = await fetch(
@@ -32,7 +31,6 @@ export async function GET(request: Request) {
             display: "flex",
             textAlign: "left",
             alignItems: "flex-start",
-            // justifyContent: "center",
             paddingTop: "70px",
             flexDirection: "column",
             flexWrap: "nowrap",
@@ -43,10 +41,8 @@ export async function GET(request: Request) {
             style={{
               width: "100%",
               fontSize: 70,
-              fontStyle: "normal",
               color: "#000",
               padding: "0 120px",
-              lineHeight: 1.3,
               marginBottom: "10px",
               wordWrap: "break-word",
             }}
@@ -60,7 +56,6 @@ export async function GET(request: Request) {
               fontStyle: "normal",
               color: "#000",
               padding: "0 120px",
-              lineHeight: 1.3,
               display: "flex",
             }}
           >

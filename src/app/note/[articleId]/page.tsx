@@ -25,6 +25,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       title: article.title,
       description: article.title,
       type: "article",
+      url: `${url}/note/${id}`,
       images: [
         {
           url: ogUrl.toString(),
