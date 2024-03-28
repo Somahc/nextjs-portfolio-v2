@@ -85,9 +85,11 @@ export async function GET(request: Request) {
               bottom: "70px",
               marginLeft: "140px",
               fontSize: 60,
+              display: "flex",
             }}
           >
-            Somahc
+            <div style={{ paddingTop: "10px", paddingRight: "10px" }}>😼</div>
+            <div>Somahc</div>
           </div>
         </div>
       ),
