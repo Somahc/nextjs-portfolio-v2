@@ -14,7 +14,7 @@ export async function GET(request: Request) {
     }
 
     const fontData = await fetch(
-      new URL("./compressedNoto.ttf", import.meta.url),
+      new URL("./compressedMplus.ttf", import.meta.url),
     ).then((res) => res.arrayBuffer());
 
     const article = await getArticlesDetail(id);
