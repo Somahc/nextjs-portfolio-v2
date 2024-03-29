@@ -1,12 +1,10 @@
 import { getArticles, getArticlesDetail } from '@/app/_lib/microcms'
-import Image from 'next/image'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import parse from 'html-react-parser'
 import Link from 'next/link'
-// import "@/styles/article.css";
 import 'zenn-content-css'
-
+import { RiArrowGoBackFill } from 'react-icons/ri'
 type Props = {
   params: { articleId: string }
 }
@@ -86,6 +84,16 @@ export default async function Article(props: Props) {
           ))}
         </div>
         <div className='mt-10'>{parse(article.content)}</div>
+        <div className='mt-10 text-center'>
+          <Link href='/note' className='inline-flex justify-center'>
+            <button className='rounded bg-blue-500 px-4 py-1 text-white hover:bg-blue-700'>
+              <span className='inline-flex items-center'>
+                Note一覧に戻る
+                <RiArrowGoBackFill size={20} className='ml-1' />
+              </span>
+            </button>
+          </Link>
+        </div>
       </div>
     </article>
   )

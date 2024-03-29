@@ -65,15 +65,16 @@ export default async function Blog() {
           </div>
         ))}
       </div>
-
-      <a href='https://zenn.dev/somahc' className='flex justify-center'>
-        <button className='rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700'>
-          <span className='inline-flex items-center'>
-            他の記事も見てみる
-            <FaExternalLinkAlt className='ml-1' />
-          </span>
-        </button>
-      </a>
+      <div className='text-center'>
+        <a href='https://zenn.dev/somahc' className='inline-flex'>
+          <button className='rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700'>
+            <span className='inline-flex items-center'>
+              他の記事も見てみる
+              <FaExternalLinkAlt className='ml-1' />
+            </span>
+          </button>
+        </a>
+      </div>
     </div>
   )
 }
