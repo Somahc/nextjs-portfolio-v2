@@ -1,30 +1,30 @@
-import { getArticles, getArticlesDetail } from "@/app/_lib/microcms";
-import Image from "next/image";
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
-import parse from "html-react-parser";
-import Link from "next/link";
+import { getArticles, getArticlesDetail } from '@/app/_lib/microcms'
+import Image from 'next/image'
+import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import parse from 'html-react-parser'
+import Link from 'next/link'
 // import "@/styles/article.css";
-import "zenn-content-css";
+import 'zenn-content-css'
 
 type Props = {
-  params: { articleId: string };
-};
+  params: { articleId: string }
+}
 
 // 各記事詳細ページのメタデータを設定(タイトルタグを設定)
 export async function generateMetadata(props: Props): Promise<Metadata> {
-  const id = props.params.articleId;
-  const article = await getArticlesDetail(id);
+  const id = props.params.articleId
+  const article = await getArticlesDetail(id)
   //   const url =
   //     `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` || "https://localhost:3000";
-  const url = "https://nextjs-portfolio-v2-one.vercel.app";
-  const ogUrl = new URL(`${url}/api/og?id=${id}`);
+  const url = 'https://nextjs-portfolio-v2-one.vercel.app'
+  const ogUrl = new URL(`${url}/api/og?id=${id}`)
   return {
     title: article.title,
     openGraph: {
       title: article.title,
       description: article.title,
-      type: "article",
+      type: 'article',
       url: `${url}/note/${id}`,
       images: [
         {
@@ -35,60 +35,58 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
         },
       ],
     },
-  };
+  }
 }
 
 // urlのパスの値を設定
 export async function generateStaticParams() {
-  const { contents } = await getArticles();
+  const { contents } = await getArticles()
   const paths = contents.map((article) => {
     return {
       article: article.id,
-    };
-  });
-  return paths;
+    }
+  })
+  return paths
 }
 
 function formatDate(originalDate: string | undefined) {
   if (!originalDate) {
-    return "";
+    return ''
   }
-  const date = new Date(originalDate);
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
+  const date = new Date(originalDate)
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
 
-  return `${year}/${month}/${day}`;
+  return `${year}/${month}/${day}`
 }
 
 export default async function Article(props: Props) {
-  const article = await getArticlesDetail(props.params.articleId);
+  const article = await getArticlesDetail(props.params.articleId)
 
   if (!article) {
-    notFound();
+    notFound()
   }
   return (
     <article>
-      <div className="znc mx-auto max-w-[640px]">
-        <div className="text-center text-6xl mb-4">{article.emoji}</div>
-        <div className="text-4xl font-bold text-center">{article.title}</div>
-        <p className="text-center text-gray-500">
-          {formatDate(article.publishedAt)}
-        </p>
-        <div className="flex flex-wrap justify-center gap-2 w-full md:px-8">
+      <div className='znc mx-auto max-w-[640px]'>
+        <div className='mb-4 text-center text-6xl'>{article.emoji}</div>
+        <div className='mx-auto max-w-max text-4xl font-bold'>{article.title}</div>
+        <p className='text-center text-gray-500'>{formatDate(article.publishedAt)}</p>
+        <div className='flex w-full flex-wrap justify-center gap-2 md:px-8'>
           {/* カテゴリの表示追加 */}
           {article.categories.map((category) => (
             <Link
               href={`/categories/${category.id}`}
-              className="text-sm bg-muted rounded-full px-2"
+              className='rounded-full bg-muted px-2 text-sm'
               key={`${article.id}-${category.id}`}
             >
               {category.name}
             </Link>
           ))}
         </div>
-        <div className="mt-10">{parse(article.content)}</div>
+        <div className='mt-10'>{parse(article.content)}</div>
       </div>
     </article>
-  );
+  )
 }
