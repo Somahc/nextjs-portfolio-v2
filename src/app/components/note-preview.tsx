@@ -18,7 +18,7 @@ export default function NotePreview({ articles }: { articles: Article[] }) {
     <>
       {articles.map((article) => (
         <article
-          className='flex flex-col rounded-2xl border border-muted p-4 duration-150 hover:scale-105'
+          className='flex flex-col rounded-2xl border border-muted p-4 duration-150 hover:scale-[1.02]'
           key={article.id}
         >
           <Link href={`/note/${article.id}`} className='flex flex-col items-center'>

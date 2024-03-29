@@ -46,7 +46,7 @@ export async function GET(request: Request) {
           <div
             style={{
               width: '100%',
-              fontSize: 70,
+              fontSize: 60,
               color: '#000',
               padding: '0 120px',
               marginBottom: '10px',
@@ -58,7 +58,7 @@ export async function GET(request: Request) {
           <div
             style={{
               width: '100%',
-              fontSize: 25,
+              fontSize: 27,
               fontStyle: 'normal',
               color: '#000',
               padding: '0 120px',
@@ -70,7 +70,7 @@ export async function GET(request: Request) {
                 key={index}
                 style={{
                   backgroundColor: '#6666FF',
-                  padding: '5px 10px',
+                  padding: '7px 10px',
                   marginRight: '10px',
                   borderRadius: '30px',
                   color: '#fff',
