@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import Header from './components/header'
 import Container from './components/container'
@@ -9,6 +10,7 @@ import { ProvidersNextUi } from './providers'
 import Favicon from './icon.png'
 
 const notoSansJp = Noto_Sans_JP({ weight: ['400', '800'], subsets: ['latin'] })
+const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID ?? ''
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextjs-portfolio-v2-one.vercel.app'),
@@ -35,6 +37,8 @@ export default function RootLayout({
           </ProvidersNextUi>
         </Providers>
       </body>
+      <GoogleTagManager gtmId={GA_MEASUREMENT_ID} />
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
   )
 }
