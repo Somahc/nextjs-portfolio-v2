@@ -11,6 +11,7 @@ import Favicon from './icon.png'
 const notoSansJp = Noto_Sans_JP({ weight: ['400', '800'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nextjs-portfolio-v2-one.vercel.app'),
   title: 'Somahcのブログ',
   description: 'Somahcのブログ',
   icons: [{ rel: 'icon', url: Favicon.src }], // ファビコン
