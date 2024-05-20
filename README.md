@@ -18,6 +18,10 @@ Next.jsで作成したポートフォリオサイトです。こちらのREADME�
 - 全ページレスポンシブ対応
 - ライト・ダークモード
 - ページ遷移時のアニメーション
+
+## その他
+- 基本的にSSG（Static Site Generation）方式でページをレンダリングしています。Zenn記事の取得やNoteの記事一覧、記事表示の部分ではISR（Incremental Static Regeneration）方式を採用し、前回のキャッシュ生成から1時間立っていた場合は新たにキャッシュを再生成・配信するようにしています。
+- Noteの情報取得にはmicroCMS JavaScript SDKを利用しています。
 ## 技術スタック
 - Next.js 14.1.4 (App Router)
 - TailwindCSS
