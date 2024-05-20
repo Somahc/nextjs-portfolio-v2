@@ -19,7 +19,7 @@ async function getZennArticles() {
   const res = await fetch(
     `${ZENN_API}api/articles?username=somahc&order=latest&count=10`,
     {
-      next: { revalidate: 60 },
+      next: { revalidate: 3600 },
     },
   )
   const data: BlogZennProps = await res.json()
