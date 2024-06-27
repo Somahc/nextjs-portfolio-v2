@@ -1,21 +1,22 @@
-import { PiButterflyFill } from "react-icons/pi";
-import Container from "./container";
+import { RiTwitterXFill } from 'react-icons/ri'
+
+import Container from './container'
 
 export default function Footer() {
   return (
-    <footer className="text-gray-600 body-font border-t py-1 mt-8 border-muted">
+    <footer className='body-font mt-8 border-t border-muted py-1 text-gray-600'>
       <Container>
-        <div className="container mx-auto py-4 flex flex-wrap flex-row">
-          <p className="text-gray-500 text-sm sm:text-left">© 2024 Somahc</p>
-          <span className="inline-flex ml-auto mt-0 justify-center sm:justify-start">
-            <div className="ml-3 text-gray-500">
-              <a href="https://bsky.app/profile/s1greni.bsky.social">
-                <PiButterflyFill size={20} color={"#696969"} />
+        <div className='container mx-auto flex flex-row flex-wrap py-4'>
+          <p className='text-sm text-gray-500 sm:text-left'>© 2024 Somahc</p>
+          <span className='ml-auto mt-0 inline-flex justify-center sm:justify-start'>
+            <div className='ml-3 text-gray-500'>
+              <a href='https://x.com/somahack'>
+                <RiTwitterXFill size={20} color={'#696969'} />
               </a>
             </div>
           </span>
         </div>
       </Container>
     </footer>
-  );
+  )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import profilePic from '../../../public/profile_pic.png'
 import Image from 'next/image'
-import { PiButterflyFill } from 'react-icons/pi'
+import { RiTwitterXFill } from 'react-icons/ri'
 import { SiZenn } from 'react-icons/si'
 import { FaGithub } from 'react-icons/fa'
 import { SiDuolingo } from 'react-icons/si'
@@ -22,7 +22,7 @@ export default function Page() {
       <p className='pb-2 text-center text-xs text-gray-400'>エンジニア志望の学生</p>
       <div className='flex justify-center pb-4 text-2xl'>
         <a href='https://bsky.app/profile/s1greni.bsky.social'>
-          <PiButterflyFill
+          <RiTwitterXFill
             className='mr-2 duration-300 hover:fill-blue-400'
             size={40}
             color={'#696969'}
