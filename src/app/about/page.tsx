@@ -81,12 +81,14 @@ export default function Page() {
         <li className='mb-2 ml-5'>NestJS</li>
       </ul>
       <h3 className='mb-3 text-2xl font-semibold' style={{ fontWeight: '800' }}>
-        資格
+        資格・賞
       </h3>
       <ul className='mb-10 list-disc'>
-        <li className='mb-2 ml-5'>英検準一級</li>
-        <li className='mb-2 ml-5'>TOEIC IP 930点</li>
+        <li className='mb-2 ml-5'>TOEIC 公開テスト 870点</li>
         <li className='mb-2 ml-5'>IELTS Academic OA 6.5点</li>
+        <li className='mb-2 ml-5'>RSS Hackathon 2024 Beyond 審査員特別賞</li>
+        <li className='mb-2 ml-5'>2022年度 学部成績最優秀賞</li>
+        <li className='mb-2 ml-5'>英検準一級</li>
         <li className='mb-2 ml-5'>普通自動車免許</li>
       </ul>
 
@@ -97,17 +99,21 @@ export default function Page() {
         Career
       </h2>
       <ul className='mb-10 list-disc'>
-        <li className='mb-2 ml-5'>青山学院大学 社会情報学部入学 (2021.4)</li>
-        <li className='mb-2 ml-5'>英語学習スタート(2022.1)</li>
         <li className='mb-2 ml-5'>
-          ゼミ配属・株式会社ハウコレにてVueフロントエンドエンジニアとして長期インターン開始(2023.4)
+          フロントエンドエンジニアとして長期インターン@株式会社ジュニ(2024.6 - now)
+        </li>
+        <li className='mb-2 ml-5'>
+          カナダ・トロントのヨーク大学へ8ヶ月の交換留学(2023.8 - 2024.4)
         </li>
         <li className='mb-2 ml-5'>
           DMM Group、Sansan株式会社にて短期インターン参加(2023.8)
         </li>
         <li className='mb-2 ml-5'>
-          カナダ・トロントのヨーク大学へ8ヶ月の交換留学(2023.8 - 2024.4)
+          ゼミ配属・フロントエンドエンジニアとして長期インターン@株式会社ハウコレ(2023.4 -
+          2023.8)
         </li>
+        <li className='mb-2 ml-5'>英語学習スタート(2022.1)</li>
+        <li className='mb-2 ml-5'>青山学院大学 社会情報学部入学 (2021.4)</li>
       </ul>
 
       <h2
