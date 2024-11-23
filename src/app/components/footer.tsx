@@ -10,7 +10,7 @@ export default function Footer() {
           <p className='text-sm text-gray-500 sm:text-left'>© 2024 Somahc</p>
           <span className='ml-auto mt-0 inline-flex justify-center sm:justify-start'>
             <div className='ml-3 text-gray-500'>
-              <a href='https://x.com/somahack'>
+              <a href='https://x.com/sigreni_jp'>
                 <RiTwitterXFill size={20} color={'#696969'} />
               </a>
             </div>
