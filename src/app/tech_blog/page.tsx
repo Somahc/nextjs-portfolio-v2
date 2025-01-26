@@ -39,7 +39,7 @@ export default async function Blog() {
   const data = await getZennArticles()
   const articles = data.articles || []
   return (
-    <div className='lg:mx-40'>
+    <div className='mb-8 lg:mx-40'>
       <h1 className='text-4xl' style={{ fontWeight: '800' }}>
         Tech Blog
       </h1>

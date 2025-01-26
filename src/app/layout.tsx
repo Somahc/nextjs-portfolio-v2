@@ -31,7 +31,7 @@ export default function RootLayout({
           <ProvidersNextUi>
             <Header />
             <Container>
-              <main className='min-h-lvh'>{children}</main>
+              <main>{children}</main>
             </Container>
             <Footer />
           </ProvidersNextUi>
