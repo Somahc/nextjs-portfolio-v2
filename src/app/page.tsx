@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { MdOutlineArticle } from 'react-icons/md'
-import { FaRegUser } from 'react-icons/fa'
 
 export default function Home() {
   return (
@@ -11,11 +10,11 @@ export default function Home() {
             <h2 className=' text-7xl' style={{ fontWeight: '800' }}>
               Hello there! 👋
             </h2>
-            <div className='break-keep pt-3 text-gray-500'>
+            <p className='break-keep pt-3 text-gray-500'>
               Somahcのポートフォリオ兼ブログサイト。
               <wbr />
               猫派です。
-            </div>
+            </p>
             <div className='mt-20 flex flex-col'>
               <Link
                 href='/tech_blog'

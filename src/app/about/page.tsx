@@ -19,10 +19,10 @@ export default function Page() {
           width={200}
           height={200}
         />
-        <p className='pb-2 text-3xl font-semibold'>Somahc</p>
+        <p className='pb-2 text-3xl font-semibold'>Somahc(Sigreni)</p>
         <p className='pb-2 text-xs text-gray-400'>エンジニア志望の学生</p>
         <div className='flex justify-center pb-4 text-2xl'>
-          <a href='https://x.com/somahack'>
+          <a href='https://x.com/nimono_vr'>
             <RiTwitterXFill
               className='mr-2 duration-300 hover:fill-blue-400'
               size={40}
@@ -52,9 +52,10 @@ export default function Page() {
           </a>
         </div>
         <p className='break-keep text-sm md:text-base'>
-          生活がもっと楽しくなるような
+          {/* 生活がもっと楽しくなるような
           <wbr />
-          モノが作れるエンジニアを目指しています。
+          モノが作れるエンジニアを目指しています。 */}
+          面白いものが作れるエンジニアを目指しています。
         </p>
       </section>
 
@@ -70,16 +71,18 @@ export default function Page() {
         </h3>
         <ul className='mb-8 list-disc'>
           <li className='mb-2 ml-5'>HTML/CSS(Tailwind CSS, SCSS)</li>
-          <li className='mb-2 ml-5'>JavaScript, TypeScript(Vue, React, Next.js)</li>
+          <li className='mb-2 ml-5'>
+            JavaScript, TypeScript(Vue, React, Next.js, NestJS)
+          </li>
           <li className='mb-2 ml-5'>C++</li>
-          <li className='mb-2 ml-5'>Unity</li>
+          <li className='mb-2 ml-5'>Unity, Unreal Engine 5</li>
           <li className='mb-2 ml-5'>Blender, Substance Painter 3D</li>
+          <li className='mb-2 ml-5'>TouchDesigner</li>
           <li className='mb-2 ml-5'>Git/GitHub</li>
           <li className='mb-2 ml-5'>Python</li>
           <li className='mb-2 ml-5'>Dart(Flutter)</li>
           <li className='mb-2 ml-5'>MySQL, PostgreSQL</li>
           <li className='mb-2 ml-5'>PHP(Laravel)</li>
-          <li className='mb-2 ml-5'>NestJS</li>
         </ul>
         <h3 className='mb-3 text-2xl font-semibold' style={{ fontWeight: '800' }}>
           資格・賞
@@ -98,9 +101,43 @@ export default function Page() {
           className='mb-4 border-b border-muted pb-3 text-4xl'
           style={{ fontWeight: '800' }}
         >
-          Career
+          Career / Works
         </h2>
         <ul className='list-disc'>
+          <h3 className='mb-3 text-2xl font-semibold' style={{ fontWeight: '800' }}>
+            2025
+          </h3>
+          <li className='mb-2 ml-5'>
+            VRChatワールド 「
+            <ExternalLink href='https://x.com/nimono_vr/status/1911016978380456321'>
+              Lakeside Glamping Dome
+            </ExternalLink>
+            」 (2025.4)
+          </li>
+          <li className='mb-2 ml-5'>
+            VRChatアバターギミック 「
+            <ExternalLink href='https://sigreni.booth.pm/items/6612290'>
+              処理中ヘイロー
+            </ExternalLink>
+            」 (2025.2)
+          </li>
+          <li className='mb-2 ml-5'>
+            VRChatアバターギミック 「
+            <ExternalLink href='https://sigreni.booth.pm/items/6550591'>
+              服薬ギミック
+            </ExternalLink>
+            」 (2025.2)
+          </li>
+          <li className='mb-2 ml-5'>
+            VRChatアバターギミック 「
+            <ExternalLink href='https://sigreni.booth.pm/items/6478444'>
+              触れたら破裂するガマの穂
+            </ExternalLink>
+            」 (2025.1)
+          </li>
+          <h3 className='mb-3 text-2xl font-semibold' style={{ fontWeight: '800' }}>
+            2024
+          </h3>
           <li className='mb-2 ml-5'>
             技育博 vol.5 「
             <ExternalLink href='https://github.com/balckowl/learning-path'>
@@ -132,6 +169,9 @@ export default function Page() {
           <li className='mb-2 ml-5'>
             フロントエンドエンジニアとして長期インターン@株式会社ジュニ(2024.6 - now)
           </li>
+          <h3 className='mb-3 text-2xl font-semibold' style={{ fontWeight: '800' }}>
+            ~ 2023
+          </h3>
           <li className='mb-2 ml-5'>
             カナダ・トロントのヨーク大学へ8ヶ月の交換留学(2023.8 - 2024.4)
           </li>
@@ -155,7 +195,7 @@ export default function Page() {
           好きなこと
         </h2>
         <p>
-          Web開発、VRChat向けアバターギミック作り、自作キーボード、カメラ、言語学習などなど。最近は3DCGにハマり、BlenderやSubstance
+          Web開発、VRChat向けアバターギミック・ワールド作り、自作キーボード、カメラ、言語学習などなど。最近は3DCGにハマり、BlenderやSubstance
           Painter 3Dと格闘しています。
         </p>
       </section>

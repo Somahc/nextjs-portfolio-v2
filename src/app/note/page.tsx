@@ -25,7 +25,7 @@ export default function Home(props: Props) {
         カテゴリー
       </h2>
       <CategoryList />
-      <div className='mt-7 grid grid-cols-1 gap-6 md:grid-cols-2'>
+      <div className='mt-7 grid auto-rows-fr grid-cols-1 gap-6 md:grid-cols-2'>
         <NotePreview articles={contents} />
       </div>
       <NotePagination
