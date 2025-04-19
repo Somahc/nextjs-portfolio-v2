@@ -115,6 +115,13 @@ export default function Page() {
             」 (2025.4)
           </li>
           <li className='mb-2 ml-5'>
+            Progateハッカソン powered by AWS 「
+            <ExternalLink href='https://topaz.dev/projects/3f596eb1f0425e4e342f'>
+              Phantom Frame
+            </ExternalLink>
+            」出場 (2025.3)
+          </li>
+          <li className='mb-2 ml-5'>
             VRChatアバターギミック 「
             <ExternalLink href='https://sigreni.booth.pm/items/6612290'>
               処理中ヘイロー
