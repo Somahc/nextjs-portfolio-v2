@@ -29,11 +29,13 @@ export default function RootLayout({
       <body className={`${notoSansJp.className}`}>
         <Providers>
           <ProvidersNextUi>
-            <Header />
-            <Container>
-              <main>{children}</main>
-            </Container>
-            <Footer />
+            <div className='flex min-h-screen w-[100vw] flex-col'>
+              <Header />
+              <main className='flex-grow'>
+                <Container>{children}</Container>
+              </main>
+              <Footer />
+            </div>
           </ProvidersNextUi>
         </Providers>
       </body>
