@@ -74,13 +74,13 @@ export default function Page() {
           <li className='mb-2 ml-5'>
             JavaScript, TypeScript(Vue, React, Next.js, NestJS)
           </li>
+          <li className='mb-2 ml-5'>GLSL/HLSL</li>
           <li className='mb-2 ml-5'>C++</li>
-          <li className='mb-2 ml-5'>Unity, Unreal Engine 5</li>
-          <li className='mb-2 ml-5'>Blender, Substance Painter 3D</li>
+          <li className='mb-2 ml-5'>Python</li>
+          <li className='mb-2 ml-5'>Unity</li>
+          <li className='mb-2 ml-5'>Blender, Substance 3D Painter</li>
           <li className='mb-2 ml-5'>TouchDesigner</li>
           <li className='mb-2 ml-5'>Git/GitHub</li>
-          <li className='mb-2 ml-5'>Python</li>
-          <li className='mb-2 ml-5'>Dart(Flutter)</li>
           <li className='mb-2 ml-5'>MySQL, PostgreSQL</li>
           <li className='mb-2 ml-5'>PHP(Laravel)</li>
         </ul>
@@ -101,12 +101,62 @@ export default function Page() {
           className='mb-4 border-b border-muted pb-3 text-4xl'
           style={{ fontWeight: '800' }}
         >
-          Career / Works
+          Career
+        </h2>
+        <ul className='list-disc'>
+          <li className='mb-2 ml-5'>
+            フロントエンドエンジニアとして長期インターン@株式会社ジュニ(2024.6 - now)
+          </li>
+          <li className='mb-2 ml-5'>
+            Unityインタラクティブエンジニアとして2週間インターン@チームラボ株式会社(2025.10)
+          </li>
+          <li className='mb-2 ml-5'>
+            Webエンジニアとして2週間インターン@ピクシブ株式会社(2025.9)
+          </li>
+          <li className='mb-2 ml-5'>
+            カナダ・トロントのヨーク大学へ8ヶ月の交換留学(2023.8 - 2024.4)
+          </li>
+          <li className='mb-2 ml-5'>
+            短期インターン参加@DMM Group、Sansan株式会社(2023.8)
+          </li>
+          <li className='mb-2 ml-5'>
+            ゼミ配属・フロントエンドエンジニアとして長期インターン@株式会社ハウコレ(2023.4
+            - 2023.8)
+          </li>
+          <li className='mb-2 ml-5'>青山学院大学 社会情報学部入学(2021.4)</li>
+        </ul>
+      </section>
+
+      <section className='mb-10'>
+        <h2
+          className='mb-4 border-b border-muted pb-3 text-4xl'
+          style={{ fontWeight: '800' }}
+        >
+          Works
         </h2>
         <ul className='list-disc'>
           <h3 className='mb-3 text-2xl font-semibold' style={{ fontWeight: '800' }}>
             2025
           </h3>
+          <li className='mb-2 ml-5'>
+            自作WebGLエディタ・シェーダー実行環境「
+            <ExternalLink href='https://github.com/Somahc/glsl-livecoding-editor-web'>
+              Bonsomatic（仮称）
+            </ExternalLink>
+            」 (2025.9)
+          </li>
+          <li className='mb-2 ml-5'>
+            Windowsアプリ「
+            <ExternalLink href='https://sigreni.booth.pm/items/7298984'>
+              いつでもマイクミュート切り替えできるやつ for VRChat
+            </ExternalLink>
+            」 (2025.8)
+          </li>
+          <li className='mb-2 ml-5'>
+            Open Hack U 2025 Tokyo「
+            <ExternalLink href='http://somahc.dev/note/us23_c1zpp'>LIFE</ExternalLink>」
+            出場(2025.6)
+          </li>
           <li className='mb-2 ml-5'>
             VRChatワールド 「
             <ExternalLink href='https://x.com/nimono_vr/status/1911016978380456321'>
@@ -173,25 +223,9 @@ export default function Page() {
             </ExternalLink>
             」審査員特別賞(2024.6)
           </li>
-          <li className='mb-2 ml-5'>
-            フロントエンドエンジニアとして長期インターン@株式会社ジュニ(2024.6 - now)
-          </li>
-          <h3 className='mb-3 text-2xl font-semibold' style={{ fontWeight: '800' }}>
-            ~ 2023
-          </h3>
-          <li className='mb-2 ml-5'>
-            カナダ・トロントのヨーク大学へ8ヶ月の交換留学(2023.8 - 2024.4)
-          </li>
-          <li className='mb-2 ml-5'>
-            DMM Group、Sansan株式会社にて短期インターン参加(2023.8)
-          </li>
-          <li className='mb-2 ml-5'>
-            ゼミ配属・フロントエンドエンジニアとして長期インターン@株式会社ハウコレ(2023.4
-            - 2023.8)
-          </li>
-          <li className='mb-2 ml-5'>英語学習スタート(2022.1)</li>
-          <li className='mb-2 ml-5'>青山学院大学 社会情報学部入学 (2021.4)</li>
         </ul>
+
+        <p className='mt-5'>その他、Discord Botなど</p>
       </section>
 
       <section className='mb-10'>
@@ -202,8 +236,7 @@ export default function Page() {
           好きなこと
         </h2>
         <p>
-          Web開発、VRChat向けアバターギミック・ワールド作り、自作キーボード、カメラ、言語学習などなど。最近は3DCGにハマり、BlenderやSubstance
-          Painter 3Dと格闘しています。
+          Web開発、VRChat向けアバターギミック・ワールド作り、自作キーボード、カメラ、言語学習などなど。最近はリアルタイムレンダリングについて勉強中です。
         </p>
       </section>
     </main>
