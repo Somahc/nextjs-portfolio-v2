@@ -78,7 +78,9 @@ export default function Page() {
           <li className='mb-2 ml-5'>C++</li>
           <li className='mb-2 ml-5'>Python</li>
           <li className='mb-2 ml-5'>Unity</li>
-          <li className='mb-2 ml-5'>Blender, Substance 3D Painter</li>
+          <li className='mb-2 ml-5'>Houdini</li>
+          <li className='mb-2 ml-5'>Blender</li>
+          <li className='mb-2 ml-5'>Substance 3D Painter</li>
           <li className='mb-2 ml-5'>TouchDesigner</li>
           <li className='mb-2 ml-5'>Git/GitHub</li>
           <li className='mb-2 ml-5'>MySQL, PostgreSQL</li>
@@ -113,6 +115,7 @@ export default function Page() {
           <li className='mb-2 ml-5'>
             Webエンジニアとして2週間インターン@ピクシブ株式会社(2025.9)
           </li>
+          <li className='mb-2 ml-5'>青山学院大学大学院 社会情報学研究科入学(2025.4)</li>
           <li className='mb-2 ml-5'>
             カナダ・トロントのヨーク大学へ8ヶ月の交換留学(2023.8 - 2024.4)
           </li>
@@ -189,6 +192,13 @@ export default function Page() {
             VRChatアバターギミック 「
             <ExternalLink href='https://sigreni.booth.pm/items/6478444'>
               触れたら破裂するガマの穂
+            </ExternalLink>
+            」 (2025.1)
+          </li>
+          <li className='mb-2 ml-5'>
+            学部卒業論文 「
+            <ExternalLink href='https://github.com/Somahc/thesis-bachelor/blob/main/main.pdf'>
+              ゲーミフィケーションを適用した英語発音学習支援システム
             </ExternalLink>
             」 (2025.1)
           </li>
